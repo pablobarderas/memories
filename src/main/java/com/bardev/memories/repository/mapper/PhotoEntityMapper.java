@@ -25,6 +25,7 @@ public class PhotoEntityMapper {
         photo.setDescription(photoEntity.getDescription());
         photo.setDate(photoEntity.getDate());
         photo.setImage(photoEntity.getImage());
+        photo.setSection(photoEntity.getSection());
 
         return photo;
     }
@@ -43,12 +44,13 @@ public class PhotoEntityMapper {
         photoEntity.setDescription(photo.getDescription());
         photoEntity.setDate(photo.getDate());
         photoEntity.setImage(photo.getImage());
+        photoEntity.setSection(photo.getSection());
 
         return photoEntity;
     }
 
     // FROM List<PHOTO-ENTITY> TO List<PHOTO>
-    public List<Photo> toPhotoEntityList(List<PhotoEntity> photoEntityList) {
+    public List<Photo> toPhotoList(List<PhotoEntity> photoEntityList) {
         return photoEntityList.stream().map(this::toPhoto).toList();
     }
 

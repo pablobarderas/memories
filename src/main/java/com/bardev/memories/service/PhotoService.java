@@ -12,4 +12,6 @@ public interface PhotoService {
 
     public void deleteById(Long id);
 
+    public List<Photo> findBySection(String section);
+
 }

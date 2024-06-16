@@ -19,6 +19,8 @@ public class Photo {
 
     private LocalDate date;
 
+    private String section;
+
     private byte[] image;
 
 }

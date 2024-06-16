@@ -30,6 +30,8 @@ public class PhotoEntity {
 
     private LocalDate date;
 
+    private String section;
+
     @Lob
     @Column(name = "image", nullable = false, columnDefinition = "LONGBLOB")
     private byte[] image;

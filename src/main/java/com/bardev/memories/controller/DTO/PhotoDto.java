@@ -11,5 +11,6 @@ public class PhotoDto {
     private Long id;
     private String name;
     private String description;
+    private String section;
     private String image;
 }

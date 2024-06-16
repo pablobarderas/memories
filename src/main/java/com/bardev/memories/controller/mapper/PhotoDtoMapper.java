@@ -24,6 +24,7 @@ public class PhotoDtoMapper {
         photoDto.setId(photo.getId());
         photoDto.setName(photo.getName());
         photoDto.setDescription(photo.getDescription());
+        photoDto.setSection(photo.getSection());
         photoDto.setImage(Base64.getEncoder().encodeToString(photo.getImage()));
 
         return photoDto;
@@ -41,6 +42,7 @@ public class PhotoDtoMapper {
         photo.setId(photoDto.getId());
         photo.setName(photoDto.getName());
         photo.setDescription(photoDto.getDescription());
+        photo.setSection(photoDto.getSection());
         photo.setImage(Base64.getDecoder().decode(photoDto.getImage()));
 
         return photo;

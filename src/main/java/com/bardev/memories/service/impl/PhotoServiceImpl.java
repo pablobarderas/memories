@@ -21,7 +21,7 @@ public class PhotoServiceImpl implements PhotoService {
 
     @Override
     public List<Photo> findAll() {
-        return photoEntityMapper.toPhotoEntityList(photoRepository.findAll());
+        return photoEntityMapper.toPhotoList(photoRepository.findAll());
     }
 
     @Override
@@ -32,6 +32,11 @@ public class PhotoServiceImpl implements PhotoService {
     @Override
     public void deleteById(Long id) {
         photoRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Photo> findBySection(String section) {
+        return photoEntityMapper.toPhotoList(photoRepository.findBySection(section));
     }
 
 }
